@@ -1,0 +1,467 @@
+/* General Styles */
+body {
+    margin: 0;
+    background-color: rgb(0 0 0);
+    color: white;
+    font-family: 'poppins' , sans-serif !important;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    background-color: #E4961A;
+
+}
+
+header h1 {
+    margin: 0;
+font-size: 1.2em;
+color: black;
+}
+
+/* Icon Navigation Styling */
+.icon-nav ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;   /* Use flexbox for horizontal layout */
+    justify-content: flex-end; 
+    gap: 20px; 
+    background-color: #E4961A; /* Example: Green background */
+    padding: 10px 20px; /* Optional: add some padding */
+    border-radius: 5px; /* Optional: round the corners */
+}
+
+.icon-nav ul li {
+    display: inline-block; /* Display list items inline */
+}
+.icon-nav ul li a { 
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+  
+}
+/* Adding a custom list style (e.g., a vertical bar) */
+.icon-nav ul li a::after {
+  content: '';
+  height: 1px;      /* Height of the bar */
+  width: 0;          /* Initial width is 0 */
+  background-color: white; 
+  position: absolute;
+  bottom: -5px;       /* Position below the link */
+  left: 50%;
+  transform: translateX(-50%); /* Center the bar */
+  transition: width 0.3s ease; /* Add a smooth transition */
+}
+
+.icon-nav ul li a:hover::after {
+  width: 100%;       /* Expand the bar on hover */
+}
+
+/* Hero Section */
+
+#hero {
+    background-image: url('hero4.jpg'); 
+    background-size: cover;
+    background-position: center;
+    text-align: center; /* Center align text content */
+    padding: 200px 0;   /* Adjust padding for height */
+    position: relative;
+    margin-top: -20px;  /* Negative margin to pull the hero section up */
+
+}
+
+/* Overlay */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Text Styling */
+.hero-text { /* Style for the text container */
+    max-width: 100%;   /* Adjust max-width as needed */
+    margin: 0 auto;    /* Center the text container */
+    color: white;     /* Ensure text is white */
+}
+
+.hero-text h2 {
+    font-size: 3em;  /* Adjust heading size */
+    margin-bottom: 20px;
+    font-weight: 50; /* Add some font weight */
+color: white;
+}
+
+.hero-text p {
+    font-size: 2em; /* Adjust paragraph size */
+    line-height: 1.2;  /* Adjust line height for better readability */
+}
+
+/* Main Content */
+main {
+    padding-top: 170px;
+}
+
+/* About Section */
+#about {
+  background-color: ghostwhite;
+  color: black;
+  padding: 80px 20px;
+  text-align: left;
+    margin-top: -250px;
+
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto; 
+}
+
+.about-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0px;
+  color: #895707;
+}
+
+.about-content h3 {
+  font-size: 1.8em;
+  margin-top: 0px; /* Added top margin for spacing */
+  margin-bottom: 10px;
+  color: #whitesmoke; 
+}
+
+.about-content p {
+  line-height: 1.6;
+  font-size:em;
+}
+
+/* Skills Section Styling (Modified) */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Adding space between skill cards */
+}
+
+.skill-card:hover{
+  opacity: 0.5s;
+}
+
+.skill-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+.skill-card {
+  background-color: #DFA444; /* Updated background color to a darker shade of gray */
+  border: 2px solid pink;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  width: 22%;
+}
+.skill-card, .project-card { /* Select both skill and project cards */
+  transition: transform 0.9s ease, box-shadow 0.9s ease; /* Smooth transition */
+}
+
+.skill-card:hover, .project-card:hover {
+  transform: translateY(-5px);       /* Move card up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+
+/* Service Card Hover Effect */
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #007bff;
+  display: block;
+  text-align: center;
+}
+
+/* Buttons */
+.download-button,
+.contact-button,
+.upwork-button {
+  display: inline-block;
+  width: 100px; 
+  margin: 30px 10px 0; 
+  padding: 10px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition property */
+}
+
+.download-button {
+  background-color: #007bff; 
+}
+
+.contact-button {
+  background-color: #28a745; 
+}
+
+.upwork-button {
+  background-color: #6fda44; 
+}
+
+/* Button Hover Effects */
+.download-button:hover,
+.contact-button:hover,
+.upwork-button:hover {
+  background-color: #0056b3; /* Darker shade on hover (adjust as needed) */
+  transform: translateY(-2px); /* Lift up slightly on hover */
+}
+/* Services Section */
+#services {
+  background-color: #f5f5f5; /* Light gray background */
+  color: #333; /* Darker text color for better contrast */
+  padding: 80px 20px;
+  text-align: center; /* Center align introductory text */
+}
+
+
+#services {
+  background-color: ghostwhite; /* Light gray background */
+  color: #333; /* Darker text color for better contrast */
+  padding: 80px 20px;
+  text-align: center; /* Center align introductory text */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  gap: 20px;
+}
+
+/* Projects Section */
+#projects {
+    background-color: ghostwhite;
+    color: #333;
+    padding: 80px 20px;
+    text-align: center; /* Center align introductory text */
+}
+
+.projects-intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.projects-intro p {
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 0 0 5px;
+    color: #222; /* Darker color */
+}
+
+.project-info p {
+    margin: 0;
+    line-height: 1.4;
+    color: #555; 
+}
+
+/* Contact Section */
+#contact {
+  background-image: url(hero.jpg);
+  color: #333;
+  padding: 0; 
+}
+
+.contact-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex; /* Use flexbox for layout */
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 20px;
+}
+
+/* Contact Content (Combined Card and Form) */
+.contact-content { 
+  background-color: #f5f5f5; /* Add background to the whole container */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  width: 40%; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* Contact Headings */
+.contact-headings h2 {
+  font-size: 1.5 em;
+  margin: 0 0 5px 0; 
+  color: #222;
+}
+
+.contact-headings h3 {
+  font-size: 2.5 em; 
+  margin: 0; 
+  color: #222;
+}
+
+/* ... other styles ... */
+
+/* Form Styles */
+.contact-form {
+  margin-top: 20px; 
+}
+
+.form-group {
+  margin-bottom: 20px; 
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left; 
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;  
+}
+
+.form-group textarea {
+  height: 100px; /* Adjust the height of the textarea */
+  resize: vertical;
+}
+
+/* Form Submit Row (New) */
+.submit-row {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.separator {
+  margin: 0 100px; 
+}
+
+/* Form Button */
+form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 20px; /* Smaller padding */
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 9px; /* Slightly smaller font size */
+  text-decoration: none; /* Remove underline */
+  width: auto;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  display: inline-flex; 
+  align-items: center;
+  text-decoration: none; 
+}
+
+.whatsapp-button i {
+  font-size: 20px; 
+  color: #25D366; 
+}
+
+
+/* Contact Image */
+.contact-image {
+  width: 30%;
+  margin-left: 20px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+/* ... other styles ... */
+
+/* Tech Icons */
+.tech-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Center the icons vertically */
+  padding: 40px 0; /* Add some padding around the icons */
+}
+
+.tech-icons img {
+  width: 60px; /* Adjust the size as needed */
+  margin: 0 15px; /* Add some spacing between the icons */
+}
+.skill-card.hide {
+  opacity: 0;
+  transform: translateY(20px); /* Initial position slightly below */
+}
+
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
+}
+.project-card img {
+  transition: transform 0.3s ease; /* Add transition property */
+}
+
+.project-card:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+
